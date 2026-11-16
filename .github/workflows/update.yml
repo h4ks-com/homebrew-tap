@@ -27,3 +27,22 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "chore: update kess to $(sed -n 's/^  version "\(.*\)"/\1/p' Formula/kess.rb)"
           git push
+
+  # after kess, so the two formula commits never race to main
+  katnav:
+    needs: kess
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - run: scripts/update-katnav.sh
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - name: Commit a changed formula
+        run: |
+          git add Formula
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: update katnav to $(sed -n 's/^  version "\(.*\)"/\1/p' Formula/katnav.rb)"
+          git pull --rebase
+          git push
