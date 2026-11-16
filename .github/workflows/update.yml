@@ -1,0 +1,28 @@
+# points each formula at its project's latest release; a project can also
+# start this run right after it releases
+name: Update formulas
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+  repository_dispatch:
+    types: [release]
+
+permissions:
+  contents: write
+
+jobs:
+  kess:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - run: scripts/update-kess.sh
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - name: Commit a changed formula
+        run: |
+          if git diff --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "chore: update kess to $(sed -n 's/^  version "\(.*\)"/\1/p' Formula/kess.rb)"
+          git push
