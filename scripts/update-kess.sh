@@ -12,6 +12,7 @@ gh release download "$tag" --repo "$repo" --pattern 'kess-*.tar.gz' --dir "$arch
 url() { echo "https://github.com/$repo/releases/download/$tag/kess-$1.tar.gz"; }
 sum() { shasum -a 256 "$archives/kess-$1.tar.gz" | cut -d ' ' -f 1; }
 
+mkdir -p Formula
 cat > Formula/kess.rb <<EOF
 class Kess < Formula
   desc "Chess on a glossy 3D board in your terminal, against a bot or online"
