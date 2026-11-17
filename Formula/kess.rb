@@ -1,28 +1,28 @@
 class Kess < Formula
   desc "Chess on a glossy 3D board in your terminal, against a bot or online"
   homepage "https://github.com/h4ks-com/kess"
-  version "0.3.2"
+  version "0.3.3"
   license "GPL-3.0-or-later"
 
   on_macos do
     on_arm do
-      url "https://github.com/h4ks-com/kess/releases/download/v0.3.2/kess-aarch64-apple-darwin.tar.gz"
-      sha256 "a2f111505bf3d97773232e22ec337c117f111e9ff492ba2d82650d05c3753040"
+      url "https://github.com/h4ks-com/kess/releases/download/v0.3.3/kess-aarch64-apple-darwin.tar.gz"
+      sha256 "7941fe0663f641b9f315670bfc34457b04b79fd396f105e52528b9902be1dc79"
     end
     on_intel do
-      url "https://github.com/h4ks-com/kess/releases/download/v0.3.2/kess-x86_64-apple-darwin.tar.gz"
-      sha256 "dcc1deef8784ddd8c159dc4244458afa9019dbfb5decc97d673c1e3e9de2431e"
+      url "https://github.com/h4ks-com/kess/releases/download/v0.3.3/kess-x86_64-apple-darwin.tar.gz"
+      sha256 "0f536071d3853dfd8f3786c3c1711d4b5f7b0980f1022d59ae6f1b7606a6e049"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/h4ks-com/kess/releases/download/v0.3.2/kess-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "ddf838f64101fa41a78b6a0dd719b566555f69763775b67f437aca1a378b1add"
+      url "https://github.com/h4ks-com/kess/releases/download/v0.3.3/kess-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "a4eb75085589d5df9a6638ab2b39d6189294b9cd43655c4c61c7e9c441e84d43"
     end
     on_intel do
-      url "https://github.com/h4ks-com/kess/releases/download/v0.3.2/kess-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "d3df2722d351cf9ffc166e061cffdfed04bc460961148133b44e87f4896c0cc8"
+      url "https://github.com/h4ks-com/kess/releases/download/v0.3.3/kess-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "5899b8d9ba29b38ec58dce0e4d5bbbe294120178bbf05e76128239210f478405"
     end
   end
 
