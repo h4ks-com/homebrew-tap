@@ -1,28 +1,28 @@
 class Katnav < Formula
   desc "Web browser for the terminal, drawn with the kitty graphics protocol"
   homepage "https://github.com/h4ks-com/katnav"
-  version "0.3.3"
+  version "0.3.4"
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
     on_arm do
-      url "https://github.com/h4ks-com/katnav/releases/download/v0.3.3/katnav-aarch64-apple-darwin.tar.gz"
-      sha256 "0246d3e0489a875466fe0b3f0119e92c8806f0c64e95d58877e9b2cc90eaa9c6"
+      url "https://github.com/h4ks-com/katnav/releases/download/v0.3.4/katnav-aarch64-apple-darwin.tar.gz"
+      sha256 "d80cf0b01b3addc5d405bc759e8e71b12f8f08af6311151e14dbc11b3e5dc561"
     end
     on_intel do
-      url "https://github.com/h4ks-com/katnav/releases/download/v0.3.3/katnav-x86_64-apple-darwin.tar.gz"
-      sha256 "962f9c50fd240d52caf583ab408f004da51c4aaf9c50ae272f5aed20f71a6615"
+      url "https://github.com/h4ks-com/katnav/releases/download/v0.3.4/katnav-x86_64-apple-darwin.tar.gz"
+      sha256 "acd4ccb43b31066cd0c78d5aeb422d199f2384d3fee849082e3aca2b358c4653"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/h4ks-com/katnav/releases/download/v0.3.3/katnav-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "319db3c2b4e46024be4491b143888d18cc72b867fffa98742c30f46efc4fdf40"
+      url "https://github.com/h4ks-com/katnav/releases/download/v0.3.4/katnav-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "643f48fc462ab19002a15a9f982f35b91102f6934aa3c19dd601267de470ed52"
     end
     on_intel do
-      url "https://github.com/h4ks-com/katnav/releases/download/v0.3.3/katnav-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "ab76e7c5fbb47956deb5198118f949726f43c8f54c40484222df350ff3e34685"
+      url "https://github.com/h4ks-com/katnav/releases/download/v0.3.4/katnav-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "c43a8e227e98d4cefa7a74687c5b5dbfd5c69194bca1ae63b10e1bfc5ed4af8a"
     end
   end
 
